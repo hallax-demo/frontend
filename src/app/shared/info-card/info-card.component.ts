@@ -1,0 +1,17 @@
+import { Component, Input, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-info-card',
+  templateUrl: './info-card.component.html',
+  styleUrls: ['./info-card.component.scss']
+})
+export class InfoCardComponent implements OnInit {
+  @Input('title') title: string;
+  @Input('icon') icon = 'mdi mdi-chevron-down';
+  @Input('label') label: string;
+  @Input('url') url = '#';
+
+  constructor() {}
+
+  ngOnInit() {}
+}

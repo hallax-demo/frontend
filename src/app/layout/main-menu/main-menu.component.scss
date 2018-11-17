@@ -1,0 +1,36 @@
+@import '~assets/scss/styles';
+
+a {
+  color: $ebony-clay;
+  text-transform: uppercase;
+}
+
+// Subcategories menu
+a.sub-category {
+  font-size: 14px;
+  &:hover {
+    background-color: $white-smoke;
+  }
+}
+
+// Menu (mobile view)
+.is-active {
+  // Subcategories menu
+  .navbar-dropdown a {
+    background-color: transparent;
+    color: $ebony-clay;
+    &:hover {
+      background-color: $white-smoke;
+    }
+  }
+}
+
+.nested {
+  &.level-1 {
+    font-weight: bold;
+  }
+  &.level-2 {
+    font-weight: normal;
+    padding-left: 10px;
+  }
+}

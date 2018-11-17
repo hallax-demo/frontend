@@ -1,0 +1,51 @@
+<div class="columns">
+  <div class="column checkout-form is-7">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="column order-summary is-5">
+    <h6 class="title is-6">Order summary: </h6>
+    <div class="order">
+      <div class="order-summary-items" *ngIf="cart">
+        <div *ngFor="let item of cart.lineItems" class="line-items">
+          <app-cart-order-content [item]="item"></app-cart-order-content>
+          <div class="columns table">
+            <div class="column is-4">
+              <div class="prop-name">Quantity</div>
+              <div>{{item.quantity}}</div>
+            </div>
+            <div class="column is-4">
+              <div class="prop-name">Price</div>
+              <div>{{ 0.01 * item.price.value.centAmount | currency: item.price.value.currencyCode}}</div>
+            </div>
+            <div class="column is-4">
+              <div class="prop-name">Total</div>
+              <div>{{ 0.01 * (item.quantity * item.price.value.centAmount) | currency: item.price.value.currencyCode}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-order-price">
+        <div class="columns row">
+          <div class="column is-4 is-offset-4">
+            <div>Subtotal</div>
+            <div>Shipping</div>
+          </div>
+          <div class="column is-4">
+            <div *ngIf="cart">{{ 0.01 * cart?.totalPrice.centAmount | currency: cart?.totalPrice.currencyCode}}</div>
+            <div>{{ 0 | currency: cart?.totalPrice.currencyCode}}</div>
+          </div>
+        </div>
+        <div class="columns row">
+          <div class="column is-4 is-offset-4">
+            <div>Sales Tax</div>
+            <div class="total-price">Total</div>
+          </div>
+          <div class="column is-4">
+            <div>{{ 0 | currency: cart?.totalPrice.currencyCode}}</div>
+            <div class="total-price" *ngIf="cart">{{ 0.01 * cart?.totalPrice.centAmount | currency: cart?.totalPrice.currencyCode}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+@import '~assets/scss/styles';
+
+.hero-head {
+  background-color: $ebony-clay;
+}
+
+.hero-body {
+  align-items: center;
+  background-color: $white;
+  padding: 0 1.5em;
+  margin: 0;
+
+  .title {
+    a {
+      color: $ebony-clay;
+      i {
+        color: $yellow;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.hero-foot {
+  border-bottom: 1px solid $light-grey;
+  // Categories menu
+  .navbar-menu {
+    .category {
+      color: $ebony-clay;
+      font-size: 18px;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+      background-color: transparent;
+      padding: 0 1em;
+      margin: 0.5em 0;
+      &:hover {
+        border-bottom-color: $ebony-clay;
+      }
+    }
+    .navbar-dropdown.is-boxed {
+      border-radius: 0 !important;
+    }
+
+    // display dropdown menu in several columns
+    @media (min-width: $md-min) {
+      .main-menu {
+        display: flex;
+      }
+    }
+  }
+}

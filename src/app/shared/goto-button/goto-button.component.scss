@@ -1,0 +1,11 @@
+@import '~assets/scss/styles';
+
+.button.btn-checkout {
+  background-color: $yellow;
+  justify-content: center;
+  min-height: 2.5em;
+  border-radius: 0;
+  &:hover {
+    background-color: $supernova;
+  }
+}

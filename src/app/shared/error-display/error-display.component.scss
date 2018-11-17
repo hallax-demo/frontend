@@ -1,0 +1,10 @@
+@import '~assets/scss/styles';
+
+.error {
+  border-color: $red;
+  &.message {
+    font-size: 12px;
+    color: $red;
+    background-color: transparent;
+  }
+}

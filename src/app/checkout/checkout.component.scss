@@ -1,0 +1,14 @@
+@import '~assets/scss/styles';
+
+.section {
+  background-color: $romance;
+
+  .subtitle {
+    font-weight: lighter;
+  }
+}
+
+.checkout {
+  background-color: $white;
+  border: 1px solid $light-grey;
+}

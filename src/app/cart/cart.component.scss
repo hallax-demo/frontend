@@ -1,0 +1,76 @@
+@import '~assets/scss/styles';
+
+.section {
+  background-color: $romance;
+}
+
+.table {
+  border: 1px solid $light-grey;
+  background-color: $white;
+
+  th,
+  td {
+    border: none;
+  }
+
+  th {
+    color: $grey;
+    font-size: 0.8em;
+  }
+
+  tr {
+    border-bottom: 1px solid $light-grey;
+  }
+}
+.subtitle {
+  color: $ebony-clay;
+  margin-bottom: 0;
+}
+.items-total {
+  margin: 0 5px 0 10px;
+  font-weight: bold;
+}
+
+.navigation {
+  margin-bottom: 1.5em;
+}
+
+.btn-back {
+  background-color: transparent;
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.btn-delete {
+  border-left: 1px solid $light-grey;
+  border-right: 1px solid $light-grey;
+  margin-top: 1em;
+  padding-top: 0;
+  cursor: pointer;
+  i {
+    color: $silver;
+  }
+  span {
+    font-size: 14px;
+  }
+}
+
+.cart-item-price {
+  font-weight: bold;
+}
+
+tfoot {
+  div {
+    text-align: right;
+    font-size: 1.05em;
+    letter-spacing: 0.1em;
+    color: $night-rider;
+    font-weight: lighter;
+
+    &.order-total {
+      font-size: 1.1em;
+      font-weight: 900;
+    }
+  }
+}

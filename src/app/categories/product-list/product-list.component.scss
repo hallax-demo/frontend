@@ -1,0 +1,77 @@
+@import '~assets/scss/styles';
+
+.section {
+  background-color: $romance;
+}
+
+.column {
+  padding: 2em;
+}
+
+.name-headline {
+  font-size: 14px;
+  color: $grey;
+}
+
+image {
+  display: block;
+}
+
+.box {
+  max-width: 270px;
+}
+
+.page-title {
+  padding: 0;
+  border: 1px solid $timberwolf;
+  position: relative;
+
+  .image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    .figcaption-banner-text {
+      position: absolute;
+      max-width: 500px;
+      bottom: 20px;
+      text-align: center;
+      transform: translate(-50%);
+      -webkit-transform: translate(-50%);
+      left: 50%;
+      width: 90%;
+    }
+  }
+  .title {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 2.5em;
+    color: $white;
+    &::after {
+      content: '';
+      width: 60px;
+      height: 1px;
+      display: block;
+      margin: 10px auto;
+      background: $white;
+    }
+  }
+}
+
+.product-description {
+  padding-top: 2em;
+
+  .item-price {
+    font-weight: 600;
+  }
+}
+
+.no-found {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.spinner {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
